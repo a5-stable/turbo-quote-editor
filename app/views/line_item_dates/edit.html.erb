@@ -1,0 +1,9 @@
+<main class="container">
+  <div class="header">
+    <h1>New quote</h1>
+  </div>
+
+  <%= turbo_frame_tag @line_item_date do %>
+    <%= render "form", line_item_date: @line_item_date, quote: @quote %>
+  <% end %>
+</main>

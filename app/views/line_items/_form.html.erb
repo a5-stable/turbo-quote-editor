@@ -1,0 +1,10 @@
+<%= simple_form_for [quote, line_item_date, line_item], html: { class: "form line-item-date" } do |f| %>
+  <% if line_item.errors.any? %>
+    <div class="error-message">
+      <%= line_item.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.text_field :name, input_html: { autofocus: true } %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>
